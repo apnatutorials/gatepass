@@ -1,0 +1,362 @@
+<!-- Start Page Loading -->
+<!-- <div id="loader-wrapper">
+      <div id="loader"></div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div> -->
+<!-- End Page Loading -->
+<!-- //////////////////////////////////////////////////////////////////////////// -->
+<!-- START HEADER -->
+<header id="header" class="page-topbar">
+  <!-- start header nav-->
+  <div class="navbar-fixed">
+    <nav class="navbar-color">
+      <div class="nav-wrapper">
+        <div class="header-search-wrapper hide-on-med-and-down sideNav-lock" style="display: none">
+          <i class="material-icons">search</i>
+          <input type="text" name="Search" class="header-search-input z-depth-2" placeholder="Explore Materialize" />
+        </div>
+        <ul class="right hide-on-med-and-down" style="display:block"> 
+          <li>
+            Welcome {{ loggedUser.name }}
+          </li>
+          <li>
+            <a href="#!" materialize="dropdown" class="waves-effect waves-block waves-light profile-button" data-activates="profile-dropdown">
+              <span class="avatar-status avatar-online">
+                <img src="../../assets/images/user.png" alt="avatar">
+                <i></i>
+              </span>
+            </a>
+          </li>              
+        </ul>
+        
+        <!-- profile-dropdown -->
+        <ul id="profile-dropdown" class="dropdown-content">
+          <li>
+            <a href="#" class="grey-text text-darken-1">
+              <i class="material-icons">face</i> {{"PROFILE_TEXT" | translate}}</a>
+          </li>
+          <li>
+            <a href="#" class="grey-text text-darken-1">
+              <i class="material-icons">settings</i> {{"SETTINGS_TEXT" | translate}}</a>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a href="#" class="grey-text text-darken-1">
+              <i class="material-icons">keyboard_tab</i> {{"LOGOUT_TEXT" | translate}}</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- END HEADER -->
+<!-- //////////////////////////////////////////////////////////////////////////// -->
+<!-- START MAIN -->
+<div id="main">
+  <!-- START WRAPPER -->
+  <div class="wrapper">
+    <!-- START LEFT SIDEBAR NAV-->
+    <aside id="left-sidebar-nav" class="nav-expanded nav-lock nav-collapsible">
+      <div class="brand-sidebar">
+        <h1 class="logo-wrapper">
+          <a href="#!" class="brand-logo darken-1">
+            <!-- Logo -->
+            <img src="../../assets/images/logo.png" alt="materialize logo">
+            <!-- <img src="../../images/logo/materialize-logo.png" alt="materialize logo"> -->
+            <!-- <span class="logo-text hide-on-med-and-down">Materialize</span> -->
+          </a>
+          <!-- <a href="#" class="navbar-toggler">
+                      <i class="material-icons">radio_button_checked</i>
+                    </a> -->
+          <span id="title">{{ "TITLE" | translate}}</span>
+          <span id="title-part">{{ "SUBTITLE" | translate}}</span>
+         
+        </h1>
+      </div>
+      <ul id="slide-out" class="side-nav fixed leftside-navigation">
+        <li class="no-padding">
+          <ul class="collapsible" data-collapsible="accordion"  materialize="collapsible">
+              <li class="bold" style="background: #eee;">
+                <a href="#!">
+                  <span class="nav-text">{{ "MAIN_NAVIGATION" | translate }}</span>
+                </a>
+              </li>
+            <li class="bold">
+              <a routerLink="/home" routerLinkActive="active" class="active" [routerLinkActiveOptions]="{exact : true}">
+                <i class="material-icons">apps</i>
+                <span class="nav-text">{{ "MENU_TITLE" | translate }}</span>
+              </a>
+            </li>
+            <li class="bold">
+              <a class="collapsible-header waves-effect waves-cyan">
+                <i class="material-icons">assignment</i>
+                <span class="nav-text">{{ "DASHBOARD_NEW_PASS" | translate}}</span>
+              </a>
+              <div class="collapsible-body">
+                <ul>
+                  <li>
+                    <a routerLink="/newPass/sarkariniji/-1" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
+                      <i class="material-icons">keyboard_arrow_right</i>
+                      <span>{{ "DASHBOARD_SARKAARI_NIJI" | translate }}</span>
+                    </a>
+                  </li>
+                  <li id="break-li">
+                    <a routerLink="/newPass/forRetiredPeople/-1" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
+                      <i class="material-icons">keyboard_arrow_right</i>
+                      <span>{{"DASHBOARD_SEVANIVRAT_ADHIKARI" | translate}}</span>
+                      <span style="margin-top:-23px;">{{"DASHBOARD_SEVANIVRAT_ADHIKARI_PART" | translate}}</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a routerLink="/newPass/nonGovernment/-1" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
+                      <i class="material-icons">keyboard_arrow_right</i>
+                      <span>{{"DASHBOARD_GAIR_SARKARI" | translate}}</span>
+                    </a>
+                  </li>
+                  <li class="" id="break-li">
+                    <a routerLink="/newPass/temporaryForNaveenBhawan/-1" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
+                      <i class="material-icons">keyboard_arrow_right</i>
+                      <span>{{"DASHBOARD_ASTHAI_MAHA_MANTRI_NAVEEN_BHAWAN" | translate}}</span>
+                      <span style="margin-top: -23px">{{"DASHBOARD_ASTHAI_MAHA_MANTRI_NAVEEN_BHAWAN_PART" | translate}}</span>
+                    </a>
+                  </li>
+                  <li id="break-li">
+                    <a routerLink="/newPass/temporaryForBapuBhawan/-1" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
+                      <i class="material-icons">keyboard_arrow_right</i>
+                      <span>{{"DASHBOARD_ASTHAI_MAHA_MANTRI_BAPU_BHAWAN" | translate}}</span>
+                      <span style="margin-top:-23px;">{{"DASHBOARD_ASTHAI_MAHA_MANTRI_BAPU_BHAWAN_PART" | translate}}</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a routerLink="/newPass/AlpAwadhi/-1" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
+                      <i class="material-icons">keyboard_arrow_right</i>
+                      <span>{{"DASHBOARD_ALP_AWADHI" | translate}}</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="bold">
+              <a class="collapsible-header waves-effect waves-cyan">
+                <i class="material-icons">dvr</i>
+                <span class="nav-text">{{"DASHBOARD_PASS_UPDATE_DELETE" | translate}}</span>
+              </a>
+              <div class="collapsible-body">
+                <ul>
+                  <li>
+                      <a routerLink="/newPass/searchPass/1" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
+                        <i class="material-icons">keyboard_arrow_right</i>
+                        <span>{{"DASHBOARD_SARKAARI_NIJI" | translate}}</span>
+                      </a>
+                    <!-- <a routerLink="/newPass/sarkariniji" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
+                      <i class="material-icons">keyboard_arrow_right</i>
+                      <span>{{"DASHBOARD_SARKAARI_NIJI" | translate}}</span>
+                    </a> -->
+                  </li>
+                  <li id="break-li">
+                      <a routerLink="/newPass/searchPass/2" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
+                        <i class="material-icons">keyboard_arrow_right</i>
+                        <span>{{"DASHBOARD_SEVANIVRAT_ADHIKARI" | translate}}</span>
+                        <span style="margin-top:-23px;">{{"DASHBOARD_SEVANIVRAT_ADHIKARI_PART" | translate}}</span>
+                      </a>
+                    <!-- <a routerLink="/newPass/forRetiredPeople" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
+                      <i class="material-icons">keyboard_arrow_right</i>
+                      <span>{{"DASHBOARD_SEVANIVRAT_ADHIKARI" | translate}}</span>
+                      <span style="margin-top:-23px;">{{"DASHBOARD_SEVANIVRAT_ADHIKARI_PART" | translate}}</span>
+                    </a> -->
+                  </li>
+                  <li>
+                      <a routerLink="/newPass/searchPass/3" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
+                        <i class="material-icons">keyboard_arrow_right</i>
+                        <span>{{"DASHBOARD_GAIR_SARKARI" | translate}}</span>
+                      </a>
+                    <!-- <a routerLink="/newPass/nonGovernment" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
+                      <i class="material-icons">keyboard_arrow_right</i>
+                      <span>{{"DASHBOARD_GAIR_SARKARI" | translate}}</span>
+                    </a> -->
+                  </li>
+                  <li>
+                      <a routerLink="/newPass/searchPass/4" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
+                        <i class="material-icons">keyboard_arrow_right</i>
+                        <span>{{"DASHBOARD_ASTHAI_MAHA_MANTRI_NAVEEN_BHAWAN" | translate}}</span>
+                      </a>
+                    <!-- <a routerLink="/newPass/temporaryForNaveenBhawan" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
+                      <i class="material-icons">keyboard_arrow_right</i>
+                      <span>{{"DASHBOARD_ASTHAI_MAHA_MANTRI_NAVEEN_BHAWAN" | translate}}</span>
+                    </a> -->
+                  </li>
+                  <li id="break-li">
+                      <a routerLink="/newPass/searchPass/5" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
+                        <i class="material-icons">keyboard_arrow_right</i>
+                        <span>{{"DASHBOARD_ASTHAI_MAHA_MANTRI_BAPU_BHAWAN" | translate}}</span>
+                        <span style="margin-top:-23px;">{{"DASHBOARD_ASTHAI_MAHA_MANTRI_BAPU_BHAWAN_PART" | translate}}</span>
+                      </a>
+                    <!-- <a routerLink="/newPass/temporaryForBapuBhawan" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
+                      <i class="material-icons">keyboard_arrow_right</i>
+                      <span>{{"DASHBOARD_ASTHAI_MAHA_MANTRI_BAPU_BHAWAN" | translate}}</span>
+                      <span style="margin-top:-23px;">{{"DASHBOARD_ASTHAI_MAHA_MANTRI_BAPU_BHAWAN_PART" | translate}}</span>
+                    </a> -->
+                    <li>
+                        <a routerLink="/newPass/searchPass/6" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>{{"DASHBOARD_ALP_AWADHI" | translate}}</span>
+                        </a>
+                      <!-- <a routerLink="/newPass/AlpAwadhi" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
+                        <i class="material-icons">keyboard_arrow_right</i>
+                        <span>{{"DASHBOARD_ALP_AWADHI" | translate}}</span>
+                      </a> -->
+                    </li>
+                </ul>
+              </div>
+              </li>
+              <li class="bold">
+                <a class="collapsible-header waves-effect waves-cyan">
+                  <i class="material-icons">time_to_leave</i>
+                  <span class="nav-text">{{"DASHBOARD_VAAHAN_PASS" | translate}}</span>
+                </a>
+                <div class="collapsible-body">
+                  <ul>
+                    <li>
+                      <a routerLink="/vahanPass/vahanPaasA/-1" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
+                        <i class="material-icons">keyboard_arrow_right</i>
+                        <span>{{"FORM_VAHAN_PATR_PRAMUKH_SACHIV_SUBHEADING" | translate}}</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a routerLink="/vahanPass/vahanPaasB/-1" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
+                        <i class="material-icons">keyboard_arrow_right</i>
+                        <span>{{"VAHAN_SAIYUKT_SACHIV_MENU_LINK" | translate}}
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a routerLink="/vahanPass/vahanPaasC/-1" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
+                        <i class="material-icons">keyboard_arrow_right</i>
+                        <span>{{"FORM_VAHAN_PATR_VIBHAGADHYAKSH_SUBHEADING" | translate}}</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a routerLink="/vahanPass/vahanPaasD/-1" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
+                        <i class="material-icons">keyboard_arrow_right</i>
+                        <span>{{"FORM_VAHAN_PATR_NIJIGADI_SUBHEADING" | translate}}</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a routerLink="/vahanPass/vahanPaasE/-1" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
+                        <i class="material-icons">keyboard_arrow_right</i>
+                        <span>{{"FORM_VAHAN_PATR_E_SUBHEADING" | translate}}</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="bold">
+                <a class="collapsible-header waves-effect waves-cyan">
+                  <i class="material-icons">commute</i>
+                  <span class="nav-text">{{"DASHBOARD_VAAHAN_PASS_UPDATE_DELETE" | translate}}</span>
+                </a>
+                <div class="collapsible-body">
+                  <ul>
+                    <li>
+                      <a routerLink="/vahanPass/vahanPaasA" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
+                        <i class="material-icons">keyboard_arrow_right</i>
+                        <span class="nav-text">{{"FORM_VAHAN_PATR_PRAMUKH_SACHIV_SUBHEADING" | translate}}</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a routerLink="/vahanPass/vahanPaasB" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
+                        <i class="material-icons">keyboard_arrow_right</i>
+                        <span>{{"VAHAN_SAIYUKT_SACHIV_MENU_LINK" | translate}}
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a routerLink="/vahanPass/vahanPaasC" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
+                        <i class="material-icons">keyboard_arrow_right</i>
+                        <span> {{"FORM_VAHAN_PATR_VIBHAGADHYAKSH_SUBHEADING" | translate}}</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a routerLink="/vahanPass/vahanPaasD" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
+                        <i class="material-icons">keyboard_arrow_right</i>
+                        <span class="nav-text">{{"FORM_VAHAN_PATR_NIJIGADI_SUBHEADING" | translate}}</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a routerLink="/vahanPass/vahanPaasE" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
+                        <i class="material-icons">keyboard_arrow_right</i>
+                        <span> {{"FORM_VAHAN_PATR_E_SUBHEADING" | translate}}</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a routerLink="/vahanPass/vahanPaasE" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
+                        <i class="material-icons">keyboard_arrow_right</i>
+                        <span>{{"VAHAN_EF_MENU_LINK" | translate}}</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a routerLink="/vahanPass/vahanPaasE" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
+                        <i class="material-icons">keyboard_arrow_right</i>
+                        <span>{{"VAHAN_GE_MENU_LINK" | translate}}</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="bold">
+                <a href="#!" class="waves-effect waves-cyan">
+                  <i class="material-icons">chrome_reader_mode</i>
+                  <span class="nav-text">{{"DASHBOARD_REPORT" | translate}}</span>
+                </a>
+              </li>
+              <li class="bold">
+                <a href="#!" class="waves-effect waves-cyan">
+                  <i class="material-icons">lock</i>
+                  <span class="nav-text">{{"DASHBOARD_CHANGE_PASSWORD" | translate}}</span>
+                </a>
+              </li>
+          </ul>
+          </li>
+      </ul>
+      <!-- <a href="#!" data-activates="slide-out" class="sidebar-collapse btn-floating btn-medium waves-effect waves-light hide-on-large-only gradient-45deg-light-blue-cyan gradient-shadow"> -->
+      <a materialize="sideNav" [materializeParams]="sidenavParams" [materializeActions]="sidenavActions" href="#" data-activates="slide-out" class="sidebar-collapse btn-floating btn-medium waves-effect waves-light hide-on-large-only gradient-45deg-light-blue-cyan gradient-shadow">
+        <i class="material-icons">menu</i>
+      </a>
+    </aside>
+    <!-- END LEFT SIDEBAR NAV-->
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
+    <!-- START CONTENT -->
+    <section id="content">
+      <!--start container-->
+      <div class="container" id="content-container">
+        <div class="row" id="breadcrumb-div">
+            <app-breadcrumb></app-breadcrumb>
+        </div>
+        <div class="row" id="router-div">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+      <!-- END WRAPPER -->
+      <!-- </div> -->
+      <!-- END MAIN -->
+      <!-- //////////////////////////////////////////////////////////////////////////// -->
+      <!-- START FOOTER -->
+      <footer class="page-footer">
+        <div class="footer-copyright">
+          <div class="container">
+            <span>Copyright ©
+              <script type="text/javascript">
+                document.write(new Date().getFullYear());
+              </script>
+              <a class="grey-text text-darken-2" href="#!" target="_blank">NIC</a> All rights reserved.</span>
+            <span class="right hide-on-small-only"> Design and Developed by
+              <a class="grey-text text-darken-2" href="#!">NIC</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <!-- END FOOTER -->
+      <!-- ================================================
+          Scripts
+          ================================================ -->

@@ -1,0 +1,194 @@
+<div   class="col s12">
+    <div   class="card">
+      <div   class="card-content" id="nongovt-div">
+        <span   class="card-title center-align">
+          {{ "FORM_ASTHAI_PRAVESH_PATR_HEADING" | translate }} <br/>
+          {{ "FORM_ASTHAI_PRAVESH_PATR_SUBHEADING" | translate }}
+        </span>
+      </div>
+      <form [formGroup]="NaveenBhawanFormGroup" materialize>
+      <div   class="card-action pt-0">
+          <div class="row">
+              <div class="input-field col s6">
+                <input id="sr_no" type="text" class="validate" formControlName="id">
+                <label for="sr_no">{{ "FORM_ASTHAI_SR_NO_LABEL" | translate }}</label>
+                <span *ngIf="!NaveenBhawanFormGroup.get('id').valid && NaveenBhawanFormGroup.get('id').touched">{{"PASS_ID_VALIDATION_MSG" | translate}}</span>
+              </div>
+              <div class="input-field col s6">
+                <input id="pass_no" type="text" class="validate" formControlName="passNo">
+                <label for="pass_no">{{ "FORM_ASTHAI_PAAS_NO_LABEL" | translate }}</label>
+                <span *ngIf="!NaveenBhawanFormGroup.get('passNo').valid && NaveenBhawanFormGroup.get('passNo').touched">{{"PASS_PASS_NO_VALIDATION_MSG" | translate}}</span>
+              </div>
+          </div>
+          <div class="row">
+              <div class="input-field col s6">
+                <input id="name" type="text" class="validate" formControlName="name">
+                <label for="name">{{ "FORM_ASTHAI_NAME_LABEL" | translate }}</label>
+                <span *ngIf="!NaveenBhawanFormGroup.get('name').valid && NaveenBhawanFormGroup.get('name').touched">{{"PASS_NAME_VALIDATION_MSG" | translate}}</span>
+              </div>
+              <div class="input-field col s6">
+                <input id="contact" type="text" class="validate" formControlName="phone">
+                <label for="contact">{{ "FORM_ASTHAI_CONTACT_LABEL" | translate }}</label>
+                <span *ngIf="!NaveenBhawanFormGroup.get('phone').valid && NaveenBhawanFormGroup.get('phone').touched">{{"PASS_PHONE_VALIDATION_MSG" | translate}}</span>
+              </div>
+          </div>
+          <div class="row">
+              <div class="input-field col s12">
+                <input id="address" type="text" class="validate" formControlName="address1">
+                <label for="address">{{ "FORM_ASTHAI_ADDRESS_LABEL" | translate }}</label>
+                <span *ngIf="!NaveenBhawanFormGroup.get('address1').valid && NaveenBhawanFormGroup.get('address1').touched">{{"PASS_ADDRESS_VALIDATION_MSG" | translate}}</span>
+              </div>
+          </div>
+          <!-- <div class="row">
+              <div class="input-field col s12">
+                <input id="contact" type="text" class="validate">
+                <label for="contact">{{ "FORM_ASTHAI_CONTACT_LABEL" | translate }}</label>
+              </div>
+          </div> -->
+          <div class="row">
+              <div class="input-field col s6">
+                <!-- <input id="fromDate" type="text" class="validate"> -->
+                <label for="fromDate">{{ "FORM_ASTHAI_AWADHI_SE" | translate }}</label>
+                <input materialize="pickadate" type="date" class="datepicker" formControlName="fromDate">
+                <span *ngIf="!NaveenBhawanFormGroup.get('fromDate').valid && NaveenBhawanFormGroup.get('fromDate').touched">{{"PASS_FROM_DATE_VALIDATION_MSG" | translate}}</span>
+              </div>
+              <div class="input-field col s6">
+                  <!-- <input id="toDate" type="text" class="validate"> -->
+                  <label for="toDate">{{ "FORM_ASTHAI_AWADHI_TAK" | translate }}</label>
+                  <input materialize="pickadate" type="date" formControlName="toDate" class="datepicker">
+                  <span *ngIf="!NaveenBhawanFormGroup.get('toDate').valid && NaveenBhawanFormGroup.get('toDate').touched">{{"PASS_FROM_DATE_VALIDATION_MSG" | translate}}</span>
+                </div>
+          </div>
+          <div class="row">
+              <div class="input-field col s6">
+                  <select name="selectedOption" materialize="material_select" [materializeSelectOptions]="selectOptions" formControlName="reference1">
+                      <option value="-1" disabled selected>{{ 'FORM_ASTHAI_SUBJECT_LABEL' | translate}}</option>
+                      <!-- <option *ngFor="let b of businesses" [value]="b.id">{{b.name}}</option> -->
+                  </select>
+                <!-- <input id="subject" type="text" class="validate">
+                <label for="subject">{{ "FORM_ASTHAI_SUBJECT_LABEL" | translate }}</label> -->
+              </div>
+              <div class="input-field col s6">
+                <select name="selectedOption" materialize="material_select" formControlName="reference2" [materializeSelectOptions]="selectOptions">
+                    <option value="-1" disabled selected>{{ 'FORM_ASTHAI_SUBJECT_LABEL' | translate}}</option>
+                    <!-- <option *ngFor="let b of businesses" [value]="b.id">{{b.name}}</option> -->
+                </select>
+              <!-- <input id="subject" type="text" class="validate">
+              <label for="subject">{{ "FORM_ASTHAI_SUBJECT_LABEL" | translate }}</label> -->
+            </div>
+          </div>
+          <div class="row">
+              <div class="input-field col s6">
+                <!-- <input id="assignDate" type="text" class="validate"> -->
+                <label for="assignDate">{{ "FORM_ASTHAI_ASSIGN_DATE_LABEL" | translate }}</label>
+                <input materialize="pickadate" type="date" class="datepicker" formControlName="issueDate">
+                <span *ngIf="!NaveenBhawanFormGroup.get('issueDate').valid && NaveenBhawanFormGroup.get('issueDate').touched">{{"PASS_ISSUE_DATE_VALIDATION_MSG" | translate}}</span>
+              </div>
+              <div class="input-field col s6">
+                  <input id="subjectNo" type="text" class="validate" formControlName="referenceNo">
+                  <label for="subjectNo">{{ "FORM_ASTHAI_SUJECT_NO_LABEL" | translate }}</label>
+                  <span *ngIf="!NaveenBhawanFormGroup.get('referenceNo').valid && NaveenBhawanFormGroup.get('referenceNo').touched">{{"PASS_REFERENCE_NUMBER_VALIDATION_MSG" | translate}}</span>
+                </div>
+          </div>
+      </div>
+      <div   class="card-action border-non">
+          <div class="row">
+              <div class="col s12">
+                <button type="submit" class="btn nongovt-btn" (click)="onSubmit()" >{{ "FORM_ASTHAI_STORE_PRINT_LABEL" | translate }}</button>
+
+                <button type="reset" class="btn nongovt-btn">{{ "FORM_ASTHAI_CANCEL_LABEL" | translate }}</button>
+              </div>
+          </div>
+      </div>
+    </form>
+    </div>
+  </div>
+  
+
+
+
+<!-- <div class="container" id="form-container">
+    <div class="row z-depth-4" id="form-row">
+    <div class="row valign-wrapper blue form-header" id="main-header">
+     <div class="col s12 center-align">
+        {{ "FORM_ASTHAI_PRAVESH_PATR_HEADING" | translate }}
+     </div> 
+    </div>
+    <div class="row valign-wrapper blue form-header" id="sub-header">
+      <div class="col s12 center-align">
+          {{ "FORM_ASTHAI_PRAVESH_PATR_SUBHEADING" | translate }}
+      </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s6">
+          <input id="sr_no" type="text" class="validate">
+          <label for="sr_no">{{ "FORM_ASTHAI_SR_NO_LABEL" | translate }}</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="pass_no" type="text" class="validate">
+          <label for="pass_no">{{ "FORM_ASTHAI_PAAS_NO_LABEL" | translate }}</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s12">
+          <input id="name" type="text" class="validate">
+          <label for="name">{{ "FORM_ASTHAI_NAME_LABEL" | translate }}</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s12">
+          <input id="address" type="text" class="validate">
+          <label for="address">{{ "FORM_ASTHAI_ADDRESS_LABEL" | translate }}</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s12">
+          <input id="contact" type="text" class="validate">
+          <label for="contact">{{ "FORM_ASTHAI_CONTACT_LABEL" | translate }}</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s6">
+          <input id="fromDate" type="text" class="validate">
+          <label for="fromDate">{{ "FORM_ASTHAI_AWADHI_SE" | translate }}</label>
+        </div>
+        <div class="input-field col s6">
+            <input id="toDate" type="text" class="validate">
+            <label for="toDate">{{ "FORM_ASTHAI_AWADHI_TAK" | translate }}</label>
+          </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s12">
+          <input id="subject" type="text" class="validate">
+          <label for="subject">{{ "FORM_ASTHAI_SUBJECT_LABEL" | translate }}</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s12">
+          <input id="subject" type="text" class="validate">
+          <label for="subject">{{ "FORM_ASTHAI_SUBJECT_LABEL" | translate }}</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s6">
+          <input id="assignDate" type="text" class="validate">
+          <label for="assignDate">{{ "FORM_ASTHAI_ASSIGN_DATE_LABEL" | translate }}</label>
+        </div>
+        <div class="input-field col s6">
+            <input id="subjectNo" type="text" class="validate">
+            <label for="subjectNo">{{ "FORM_ASTHAI_SUJECT_NO_LABEL" | translate }}</label>
+          </div>
+    </div>
+    <div class="row">
+        <div class="col s4">
+          <button class="btn">{{ "FORM_ASTHAI_STORE_PRINT_LABEL" | translate }}</button>
+        </div>
+        <div class="col s4">
+          <button class="btn">{{ "FORM_ASTHAI_CANCEL_LABEL" | translate }}</button>
+        </div>
+        <div class="col s4">
+          <button class="btn">{{ "FORM_ASTHAI_WITHDRAWL_LABEL" | translate }}</button>
+        </div>
+    </div>
+  </div>
+  </div> -->

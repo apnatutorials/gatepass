@@ -1,0 +1,57 @@
+.login-credentials .input-field{
+    height: 100% !important ;
+    margin: 0 !important ;
+    padding: 0 !important ;
+}
+.login-credentials .input-field input{
+    height: 30px !important;
+    /* padding-left: 5%; */
+}
+.login-credentials .submit-btn{
+    background-color: #ff9933;
+}
+
+.login-credentials input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea{
+    border-bottom: none !important;
+    height: unset;
+    margin: unset;
+}
+
+.login-credentials .input-field label{
+    top: -5px !important;
+    /* color: #ff9933; */
+    /* color: #d2d2d2; */
+    color: #9d9993fa;
+    
+}
+
+.login-credentials .input-field label.active{
+    top: -5px !important;
+    color: #ff9933;
+    
+    
+}
+
+.login-credentials input[type=email]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]){
+    color: #ff9933;
+    border-bottom: none !important;
+    box-shadow: unset !important;
+}
+
+.login-credentials input[type=email]:not(.browser-default):focus:not([readonly]) + label, input[type=password]:not(.browser-default):focus:not([readonly]) + label{
+    color: #ff9933;
+}
+
+.login-credentials input.invalid:not([type]), input.invalid:not([type]):focus, input[type=text].invalid:not(.browser-default), input[type=text].invalid:not(.browser-default):focus, input[type=password].invalid:not(.browser-default), input[type=password].invalid:not(.browser-default):focus, input[type=email].invalid:not(.browser-default), input[type=email].invalid:not(.browser-default):focus, input[type=url].invalid:not(.browser-default), input[type=url].invalid:not(.browser-default):focus, input[type=time].invalid:not(.browser-default), input[type=time].invalid:not(.browser-default):focus, input[type=date].invalid:not(.browser-default), input[type=date].invalid:not(.browser-default):focus, input[type=datetime].invalid:not(.browser-default), input[type=datetime].invalid:not(.browser-default):focus, input[type=datetime-local].invalid:not(.browser-default), input[type=datetime-local].invalid:not(.browser-default):focus, input[type=tel].invalid:not(.browser-default), input[type=tel].invalid:not(.browser-default):focus, input[type=number].invalid:not(.browser-default), input[type=number].invalid:not(.browser-default):focus, input[type=search].invalid:not(.browser-default), input[type=search].invalid:not(.browser-default):focus, textarea.materialize-textarea.invalid, textarea.materialize-textarea.invalid:focus, .select-wrapper.invalid > input.select-dropdown{
+    color: red;
+    font-weight: bold;
+    border-bottom: none !important;
+    box-shadow: unset !important;
+}
+
+.login-credentials input.valid:not([type]), input.valid:not([type]):focus, input[type=text].valid:not(.browser-default), input[type=text].valid:not(.browser-default):focus, input[type=password].valid:not(.browser-default), input[type=password].valid:not(.browser-default):focus, input[type=email].valid:not(.browser-default), input[type=email].valid:not(.browser-default):focus, input[type=url].valid:not(.browser-default), input[type=url].valid:not(.browser-default):focus, input[type=time].valid:not(.browser-default), input[type=time].valid:not(.browser-default):focus, input[type=date].valid:not(.browser-default), input[type=date].valid:not(.browser-default):focus, input[type=datetime].valid:not(.browser-default), input[type=datetime].valid:not(.browser-default):focus, input[type=datetime-local].valid:not(.browser-default), input[type=datetime-local].valid:not(.browser-default):focus, input[type=tel].valid:not(.browser-default), input[type=tel].valid:not(.browser-default):focus, input[type=number].valid:not(.browser-default), input[type=number].valid:not(.browser-default):focus, input[type=search].valid:not(.browser-default), input[type=search].valid:not(.browser-default):focus, textarea.materialize-textarea.valid, textarea.materialize-textarea.valid:focus, .select-wrapper.valid > input.select-dropdown{
+    color: #4CAF50;
+    font-weight: bold;
+    border-bottom: none !important;
+    box-shadow: unset !important;
+}

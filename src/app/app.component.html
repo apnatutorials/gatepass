@@ -1,0 +1,3 @@
+<app-login *ngIf="loginService.getLoggedUser().id == -1"></app-login>
+<app-main-area *ngIf="loginService.getLoggedUser() != null && loginService.getLoggedUser().id > -1"></app-main-area>
+<!-- <app-dashboard></app-dashboard> -->

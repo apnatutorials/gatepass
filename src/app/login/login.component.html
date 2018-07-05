@@ -1,0 +1,59 @@
+<div class="container" id="wrapper-container">
+  <div class="row z-depth-2" id="wrapper-row">
+    <div class="col s5" id="left-wrapper">
+      <div class="row" id="logo-div">
+        <div class="col s2">
+          <img src="../../assets/images/logo.png" alt="">
+        </div>
+        <div class="col s10 hide-on-med-and-down">
+          <span id="title">{{ "LOGO_TITLE" | translate}}</span>
+          <br/>
+        </div>
+      </div>
+      <div class="row login-tag-style">
+        <span>{{"LOGO_SUB_TITLE" | translate}}</span>
+      </div>
+      <form [formGroup]="loginFormGroup" materialize>
+        <div class="row login-credentials">
+          <div class="col s2 icon-container">
+            <i class="tiny material-icons prefix icon-color ">@</i>
+          </div>
+          <div class="col s10 input-field">
+            <input id="first_name" type="email" class="validate" formControlName="userId">
+            <label for="first_name">{{ "LOGIN_USERNAME_LABEL" |translate}}</label>
+          </div>
+        </div>
+        <div class="row login-error-text">
+            <span *ngIf="!loginFormGroup.get('userId').valid && loginFormGroup.get('userId').touched">Please enter valid username</span>
+        </div>
+        <div class="row login-credentials m-t-2">
+          <div class="col s2 icon-container">
+            <i class="tiny material-icons prefix icon-color ">lock</i>
+          </div>
+          <div class="col s10 input-field">
+            <input id="password" type="password" class="validate" formControlName="password">
+            <label for="password">{{ "LOGIN_PASSWORD_LABEL" |translate}}</label>
+          </div>
+        </div>
+        <div class="row login-error-text">
+           <span *ngIf="!loginFormGroup.get('password').valid && loginFormGroup.get('password').touched">Please enter valid password</span>
+        </div>
+        <div class="row login-btn-row">
+          <button type="submit" class="btn submit-btn" (click)="onSubmit()">{{ "LOGIN_BTN_LABEL" | translate }}</button>
+        </div>
+      </form>
+    </div>
+    <div class="col s7" id="right-wrapper">
+      <div class="white-text project-text center">
+        <span>{{"PROJECT_NAME_1" | translate}}</span>
+        &nbsp;
+        <span class="name-text">{{"PROJECT_NAME_2" | translate}}</span>
+        &nbsp;
+        <span>{{"PROJECT_NAME_3" | translate}}</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row valign-center center copyright-div">
+  copyright © 2005 National Infomatics Center (NIC) Up State Unit, Lucknow
+</div>

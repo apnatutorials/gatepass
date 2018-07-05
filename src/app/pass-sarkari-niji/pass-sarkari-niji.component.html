@@ -1,0 +1,81 @@
+<div   class="col s12">
+    <div   class="card">
+      <div   class="card-content" id="sarkarinii-div">
+        <span   class="card-title center-align">{{ "FORM_SACHIVALAYA_PRAVESH_PATR_HEADING" | translate }}</span>
+      </div>
+      <form [formGroup]="sarkariNijiFormGroup" materialize>
+      <div   class="card-action pt-0">
+          <div class="row">
+              <div class="input-field col s6">
+                <input id="sr_no" type="text" class="validate" formControlName="id">
+                <label for="sr_no">{{ "FORM_ASTHAI_SR_NO_LABEL" | translate }}</label>
+                <span *ngIf="!sarkariNijiFormGroup.get('id').valid && sarkariNijiFormGroup.get('id').touched">{{"PASS_ID_VALIDATION_MSG" | translate}}</span>
+              </div>
+              <div class="input-field col s6">
+                <input id="pass_no" type="text" class="validate" formControlName="passNo">
+                <label for="pass_no">{{ "FORM_ASTHAI_PAAS_NO_LABEL" | translate }}</label>
+                <span *ngIf="!sarkariNijiFormGroup.get('passNo').valid && sarkariNijiFormGroup.get('passNo').touched">{{"PASS_PASS_NO_VALIDATION_MSG" | translate}}</span>
+              </div>
+          </div>
+          <div class="row">
+              <div class="input-field col s6">
+                <input id="name" type="text" class="validate" formControlName="name">
+                <label for="name">{{ "FORM_ASTHAI_NAME_LABEL" | translate }}</label>
+                <span *ngIf="!sarkariNijiFormGroup.get('name').valid && sarkariNijiFormGroup.get('name').touched">{{"PASS_NAME_VALIDATION_MSG" | translate}}</span>
+              </div>
+              <div class="input-field col s6">
+                <input id="contact" type="text" class="validate" formControlName="phone">
+                <label for="contact">{{ "FORM_ASTHAI_CONTACT_LABEL" | translate }}</label>
+                <span *ngIf="!sarkariNijiFormGroup.get('phone').valid && sarkariNijiFormGroup.get('phone').touched">{{"PASS_PHONE_VALIDATION_MSG" | translate}}</span>
+              </div>
+          </div>
+          <div class="row">
+              <div class="input-field col s6">
+                <input id="designation" type="text" class="validate" formControlName="designation">
+                <label for="designation">{{ "FORM_ASTHAI_DESIGNATION_LABEL" | translate }}</label>
+                <span *ngIf="!sarkariNijiFormGroup.get('designation').valid && sarkariNijiFormGroup.get('designation').touched">{{"PASS_DESIGNATION_VALIDATION_MSG" | translate}}</span>
+              </div>
+              <div class="input-field col s6">
+                <input id="office" type="text" class="validate" formControlName="office">
+                <label for="office">{{ "FORM_ASTHAI_OFFICE_LABEL" | translate }}</label>
+                <span *ngIf="!sarkariNijiFormGroup.get('office').valid && sarkariNijiFormGroup.get('office').touched">{{"PASS_OFFICE_VALIDATION_MSG" | translate}}</span>
+              </div>
+          </div>
+          <div class="row">
+              <div class="input-field col s6">
+                  <select name="selectedOption" materialize="material_select" formControlName="reference1" [materializeSelectOptions]="selectOptions">
+                      <option value="-1" disabled selected>{{ 'FORM_ASTHAI_SUBJECT_LABEL' | translate}}</option>
+                      <!-- <option *ngFor="let b of businesses" [value]="b.id">{{b.name}}</option> -->
+                  </select>
+              </div>
+              <div class="input-field col s6">
+                <select name="selectedOption" materialize="material_select" formControlName="reference2" [materializeSelectOptions]="selectOptions">
+                    <option value="-1" disabled selected>{{ 'FORM_ASTHAI_SUBJECT_LABEL' | translate}}</option>
+                    <!-- <option *ngFor="let b of businesses" [value]="b.id">{{b.name}}</option> -->
+                </select>
+            </div>
+          </div>
+          <div class="row">
+              <div class="input-field col s6">
+                <label for="assignDate">{{ "FORM_ASTHAI_ASSIGN_DATE_LABEL" | translate }}</label>
+                <input materialize="pickadate" type="date" class="datepicker" formControlName="issueDate">
+                <span *ngIf="!sarkariNijiFormGroup.get('issueDate').valid && sarkariNijiFormGroup.get('issueDate').touched">{{"PASS_ISSUE_DATE_VALIDATION_MSG" | translate}}</span>
+              </div>
+              <div class="input-field col s6">
+                  <input id="subjectNo" type="text" class="validate" formControlName="referenceNo">
+                  <label for="subjectNo">{{ "FORM_ASTHAI_SUJECT_NO_LABEL" | translate }}</label>
+                  <span *ngIf="!sarkariNijiFormGroup.get('referenceNo').valid && sarkariNijiFormGroup.get('referenceNo').touched">{{"PASS_REFERENCE_NUMBER_VALIDATION_MSG" | translate}}</span>
+                </div>
+          </div>
+      </div>
+      <div   class="card-action border-non">
+          <div class="row">
+              <div class="col s12">
+                <button class="btn sarkarinii-btn" type="submit" (click)="onSubmit()">{{ "FORM_ASTHAI_STORE_PRINT_LABEL" | translate }}</button>
+                <button class="btn sarkarinii-btn" type="reset">{{ "FORM_ASTHAI_CANCEL_LABEL" | translate }}</button>
+              </div>
+          </div>
+      </div>
+    </form>
+    </div>
+  </div>

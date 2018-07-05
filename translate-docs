@@ -1,0 +1,6 @@
+I have installed  @ngx-translate/core version 9.1.1  and @ngx-translate/http-loader version 2.0.1
+npm install @ngx-translate/http-loader@2.0.1 --save 
+because,above this version is not compatible with angular 5 and above. 
+
+npm install @ngx-translate/core@9.1.1 --save
+npm install @ngx-translate/http-loader@2.0.1 --save
