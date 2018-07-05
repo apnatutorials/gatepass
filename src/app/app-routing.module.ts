@@ -280,7 +280,7 @@ const appRoutes: Routes = [
                 path: 'vahanPaasA/:id',
                 component: VaahanPraveshPtraComponent,
                 data: {
-                    breadcrumb: 'Vahan paas for Pramukh Sachiv/ sachiv'
+                    breadcrumb: 'Vahan paas for pramukh sachiv/ sachiv'
                 },
             },
             {
